@@ -76,11 +76,14 @@ var Gnomo = yeoman.generators.Base.extend({
 			this.version = props.version;
 			this.authorName = props.authorName;
 
-			this.primaryColor = (props.primaryColor.charCodeAt(0) == 35) 
-				? props.primaryColor : '#' + props.primaryColor;
+			this.primaryColor = this._formatColor(props.primaryColor);
+			this.secondaryColor = this._formatColor(props.secondaryColor);
 
-			this.secondaryColor = (props.secondaryColor.charCodeAt(0) == 35) 
-				? props.secondaryColor : '#' + props.secondaryColor;
+			this.primaryFont = props.primaryFont;
+			this.secondaryFont = props.secondaryFont;
+
+			this.primaryFontName = this._getFontName(props.primaryFont);
+			this.secondaryFontName = this._getFontName(props.secondaryFont);
 
 			this.sourceFolderName = props.sourceFolderName;
 
@@ -92,7 +95,7 @@ var Gnomo = yeoman.generators.Base.extend({
 			this.year = d.getFullYear();
 
 			this.options = {
-
+				"skip-install": true
 			};
 
 			done();
@@ -111,6 +114,29 @@ var Gnomo = yeoman.generators.Base.extend({
 		this.copy('_gulpfile.js', 'gulpfile.js');
 		this.copy('_bower.json', 'bower.json');
 		this.copy('_bowerrc', '.bowerrc');
+	},
+
+	/**
+	 * Checks if the color code given in input contains
+	 * the '#' char and adds it in case it doesn't
+	 * 
+	 * @param  {String} name The name for the color variable to format
+	 * @return {String}       The color code comprised of '#' char
+	 */
+	_formatColor: function(color) {
+		return (color.charCodeAt(0) == 35) 
+			? color : '#' + color;
+	},
+
+	/**
+	 * Extract the name of the font from the full
+	 * string given as input
+	 * 
+	 * @param  {String} name The name for the font variable to extract the name from
+	 * @return {String}      The font name
+	 */
+	_getFontName: function(font) {
+		return font;
 	}
 });
 
