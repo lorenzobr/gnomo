@@ -1,0 +1,71 @@
+doctype 
+html
+	head
+		base(href="/")
+		title <%= name %>
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		//link(rel="stylesheet" href="public/css/font-awesome.min.css" type="text/css")
+		link(rel="stylesheet" href="public/css/style.min.css" type="text/css")
+		block styles
+	body(data-ng-app="<%= appName %>" data-ng-controller="AppController")
+		#wrap
+			header#site-header
+				nav.navbar.navbar-default
+					div.grid-container
+						div.navbar-header
+							button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav")
+								span.icon-bar
+								span.icon-bar
+								span.icon-bar
+							a(class="navbar-brand" href="/") Company Logo
+						div(id="main-nav" class="collapse navbar-collapse")
+							ul.nav.navbar-nav.navbar-right
+								li.active: a(href="#features") how it works
+								li
+									a(href="" class="dropdown-toggle" data-toggle="dropdown") product
+									ul.dropdown-menu
+										li: a(href="") customers
+										li: a(href="") pricing
+										li: a(href="") FAQ
+								li: a(href="" class="signin-btn" data-ng-click="login()") sign in
+			#site-content
+				block content
+			footer#site-footer
+				div#footer-navbar
+					div.grid-container
+						div.grid-4
+							h4 Company Name Ltd.
+							div.address
+								p Belvedere Road
+								p London
+								p SE1 8XX
+						div.footer-nav.grid-4
+							h4 Products
+							ul
+								li: a(href="") Customers
+								li: a(href="") Pricing
+								li: a(href="") FAQ
+						div.footer-nav.grid-4
+							h4 Latest Openings
+							ul
+								li: a(href="") Technical Account
+								li: a(href="") Sales Manager
+								li: a(href="") Account Executive
+								li: a(href="") View more
+						div.social.footer-nav.grid-4
+							h4 Join us
+							div.clear
+							span: a(): i.fa.fa-facebook
+							span: a(): i.fa.fa-twitter
+							span: a(): i.fa.fa-linkedin
+							span: a(): i.fa.fa-google-plus
+				div.copy
+					div.grid-container
+						p &copy; 2015 Company Name
+						p
+							a(href="#") Terms &amp; Conditions
+							span &nbsp;&bull;&nbsp;
+							a(href="#") Privacy
+		script(src="public/js/libs.min.js")
+		script(src="public/js/app.min.js")
+		block scripts

@@ -1,0 +1,26 @@
+/**
+ * Copyright @ <%= year %> <%= authorName %>
+ *
+ * Version: <%= version %>
+ * <%= homepage %>
+ *
+ * LAYOUT
+ * =========================================================
+ *
+ * This file contains the styles for the layout of the page 
+ * (most of the time the grid system setup if any).
+ */
+
+// Susy framework base configuration
+$susy: (
+	columns: 12,
+	global-box-sizing: border-box
+);
+
+$default-grid: susy-get(columns);
+
+// Media sizes
+$media-desktop: min-width 992px;
+$media-tablet: min-width 768px;
+$media-mobile: min-width 480px;
+$media-xtrasmall: min-width 268px;

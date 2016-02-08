@@ -1,0 +1,25 @@
+/**
+ * Copyright @ <%= year %> <%= authorName %>
+ *
+ * Version: <%= version %>
+ * <%= homepage %>
+ *
+ * VARIABLES
+ * =========================================================
+ *
+ * This file contains the SASS variables
+ */
+
+$base_color: #444;
+
+$primary_color: <%= primaryColor %>;
+$secondary_color: <%= secondaryColor %>;
+
+$grey: #98B3BB;
+$light_grey: lighten($grey, 25%);
+$dark: #1F2439;
+$dark_grey: #3F4C5B; 
+
+$green: #37BF5B;
+$yellow: #FFCC15;
+$red: #FE0000;

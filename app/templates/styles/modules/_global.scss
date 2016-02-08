@@ -1,0 +1,31 @@
+/**
+ * Copyright @ <%= year %> <%= authorName %>
+ *
+ * Version: <%= version %>
+ * <%= homepage %>
+ *
+ * GLOBAL
+ * =========================================================
+ *
+ * This file contains the global styles for the application 
+ * (most of the time global styles for HTML tags).
+ */
+
+a {
+	color: $primary_color;
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+i {
+	&.space-right { margin-right: 5px }
+	&.space-left { margin-left: 5px }
+}

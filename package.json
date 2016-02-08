@@ -1,0 +1,32 @@
+{
+  "name": "generator-gnomo",
+  "version": "1.0.0",
+  "description": "Yeoman generator for front-end web app",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "lorenzobr/gnomo",
+  "author": {
+    "name": "Lorenzo Bruno",
+    "email": "hello@lorenzobruno.com",
+    "url": "https://github.com/lorenzobr"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "scaffold",
+    "framework",
+    "front-end",
+    "app",
+    "angular",
+    "jade",
+    "sass"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.20.2",
+    "chalk": "^1.1.0",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {}
+}
